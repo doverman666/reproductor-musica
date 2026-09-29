@@ -33,20 +33,17 @@ header {
 .dog-image {
   width: 180px;
   height: 150px;
-  margin: 0 auto 10px;
-  overflow: hidden;
-  border-radius: 24px;
-  background: #d7f3fc;
-  position: relative;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dog-image img {
-  position: absolute;
-  width: 360%;
-  max-width: none;
-  height: auto;
-  left: -2%;
-  top: -10%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 header h1 {
@@ -261,12 +258,12 @@ header h1 {
   <div class="container">
 
 <header>
-  <div class="dog-image">
-    <img
-      src="URL_DE_LA_IMAGEN"
-      alt="Plum"
-    >
-  </div>
+<div class="dog-image">
+  <img
+    src="plum.png"
+    alt="Plum"
+  >
+</div>
 
   <h1>Plum</h1>
   <p>Canciones</p>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcia</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111827;
+      color: white;
+      padding: 30px 20px 120px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+
+    .subtitle {
+      color: #9ca3af;
+      margin: 0;
+    }
+
+    .song {
+      background: #1f2937;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .song:hover {
+      background: #374151;
+    }
+
+    .song-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .song-number {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 25px;
+    }
+
+    .notice {
+      text-align: center;
+      color: #6b7280;
+      font-size: 13px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>🎵 Marcia</h1>
+      <p class="subtitle">Canciones especiales</p>
+    </header>
+
+    <div class="song" onclick="playSong(0)">
+      <div class="song-title">Marcia - Track 1</div>
+      <div class="song-number">Canción 1</div>
+    </div>
+
+    <div class="song" onclick="playSong(1)">
+      <div class="song-title">Marcia - Track 2</div>
+      <div class="song-number">Canción 2</div>
+    </div>
+
+    <div class="song" onclick="playSong(2)">
+      <div class="song-title">Marcia - Track 3</div>
+      <div class="song-number">Canción 3</div>
+    </div>
+
+    <div class="song" onclick="playSong(3)">
+      <div class="song-title">Marcia - Track 4</div>
+      <div class="song-number">Canción 4</div>
+    </div>
+
+    <audio id="player" controls></audio>
+
+    <div class="notice">
+      Página especial
+    </div>
+
+  </div>
+
+  <script>
+
+    const songs = [
+      "Marcia-track1.mp3",
+      "Marcia-track2.mp3",
+      "Marcia-track3.mp3",
+      "Marcia-track4.mp3"
+    ];
+
+    const player = document.getElementById("player");
+
+    function playSong(index) {
+      player.src = "mp3-privados/" + encodeURIComponent(songs[index]);
+      player.play();
+    }
+
+  </script>
+
+</body>
+</html>

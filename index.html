@@ -25,15 +25,35 @@
       padding: 30px 20px;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 32px;
-    }
+.dog-image {
+  width: 180px;
+  height: 150px;
+  margin: 0 auto 10px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #d7f3fc;
+  position: relative;
+}
+
+.dog-image img {
+  position: absolute;
+  width: 420%;
+  max-width: none;
+  height: auto;
+  left: -67%;
+  top: -25%;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 700;
+}
 
     header p {
       margin: 0;
@@ -240,10 +260,17 @@
 
   <div class="container">
 
-    <header>
-      <h1>🎵 Mi Música</h1>
-      <p>Lista de canciones</p>
-    </header>
+<header>
+  <div class="dog-image">
+    <img
+      src="URL_DE_LA_IMAGEN"
+      alt="Plum"
+    >
+  </div>
+
+  <h1>Plum</h1>
+  <p>Canciones</p>
+</header>
 
     <input
       type="text"
